@@ -679,7 +679,9 @@ display: flex;
     transition: transform 250ms var(--brand-function-cubic);
 }
 
-.project-item:hover .project-overlay {
+.project-item:hover .project-overlay,
+.project-item:focus .project-overlay
+ {
     transform: translateY(0);
     opacity: 1;
 }
