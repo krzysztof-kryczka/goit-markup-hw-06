@@ -595,7 +595,7 @@ display: flex;
     transition: transform 250ms var(--brand-function-cubic);
 }
 
-.close-btn {
+.modal-close-btn {
     position: absolute;
     height: 30px;
     width: 30px;
@@ -605,6 +605,182 @@ display: flex;
     border-radius: 50%;
     cursor: pointer;
     font-size: 25px;
+    background-color: var(--brand-color-white);
+}
+
+.modal-order-service-title {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: 0.03em;
+    text-align: center;
+    color: var(--brand-color-black);
+    margin-top: 40px;
+}
+
+.modal-order-service-form > label {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.modal-order-service-label {
+    position: relative;
+    max-width: 448px;
+    margin: 0 auto;
+}
+
+.modal-order-service-text {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: var(--brand-color-grey);
+    margin-top: 12px;
+    margin-bottom: 4px;
+}
+
+.modal-order-service-input {
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: var(--brand-radius);
+    height: 40px;
+    position: relative;
+    padding-left: 42px;
+    transition-property: outline-color, fill, border-color;
+    transition-duration: 250ms;
+    transition-timing-function: var(--cubic-bezier);
+}
+
+.modal-order-service-icon {
+    position: absolute;
+    fill: var(--brand-color-black);
+    height: 18px;
+    width: 18px;
+    left: 12px;
+    top: 40px;
+}
+
+.modal-order-service-textarea {
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: var(--brand-radius);
+    max-height: 120px;
+    resize: none;
+    padding-top: 12px;
+    padding-left: 16px;
+    transition-property: outline-color, fill, border-color;
+    transition-duration: 250ms;
+    transition-timing-function: var(--cubic-bezier);
+}
+
+.modal-order-service-textarea::placeholder {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+}
+
+.modal-order-service-checkbox {
+    display: block;
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.modal-order-service-checkbox-text {
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+    color: var(--brand-color-grey);
+    margin-left: 77px;
+}
+
+.modal-order-service-checkbox-link {
+    color: var(--brand-color-blue);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* Hide the browser's default checkbox */
+.modal-order-service-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: none;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 4px;
+    left: 55px;
+    height: 15px;
+    width: 16px;
+    background-color: var(--brand-background-white);
+    border: 2px solid var(--brand-color-black);
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+/* When the checkbox is checked, add a blue background and blue border */
+.modal-order-service-checkbox input:checked~.checkmark {
+    background-color: var(--brand-color-blue);
+    border: 2px solid var(--brand-color-blue);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.modal-order-service-checkbox input:checked~.checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.modal-order-service-checkbox .checkmark:after {
+    /* content: '✓'; */
+    content: '🗸';
+    left: 1px;
+    top: -1px;
+    color: var(--brand-color-white);
+    font-weight: 900;
+    font-size: 14px;
+}
+
+.modal-order-service-input:is(:focus, :active),
+.modal-order-service-input:where(:focus, :active) + .modal-order-service-icon,
+.modal-order-service-textarea:is(:focus, :active)
+{
+    fill: var(--brand-color-blue);
+    border-color: var(--brand-color-blue);
+    outline: none;
+}
+
+.modal-order-service-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.modal-order-service-btn-send {
+    width: 200px;
+    height: 50px;
+    background: var(--brand-color-blue);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.875;
+    letter-spacing: 0.06em;
+    color: var(--brand-color-white);
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: var(--brand-function-cubic);
+}
+
+.modal-order-service-btn-send:hover {
+    background-color: rgb(12, 57, 93);
 }
 
 /* *************** portfolio.html *************** */
